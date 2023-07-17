@@ -1,10 +1,8 @@
-
-function App() {
- 
-
+function App () {
   return (
     <>
-      <h1>Holi</h1>
+      <h1>Bienvenido a Wipay</h1>
+
     </>
   )
 }
