@@ -20,7 +20,7 @@ const NavbarLinkContainer = styled.div`
 
 const NavbarLink = styled(Link)`
 color: black;
-font-size: 18px;
+font-size: 1.3rem;
 font-weight: bold;
 display: flex;
 padding-right: 2rem;

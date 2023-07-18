@@ -9,7 +9,7 @@ display: flex;
 justify-content: flex-start;
 
 & h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 4rem 0rem;
   text-align: center;
   
@@ -29,7 +29,7 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
 cursor:pointer;
 & p {
   color:#db1b43;
-  font-size: 6rem;
+  font-size: 7rem;
   font-weight: bolder;
 }
 `
