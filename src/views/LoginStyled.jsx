@@ -21,10 +21,9 @@ const Input = styled.input`
     
     margin: 10px 0;
     display: block;
-    font-size: 1.1rem;
     border-radius: 5px;
     border: 1px solid #060303;
-    padding-left: 10px;
+    padding: 10px;
     
     `
 const ButtonContainer = styled.div`
