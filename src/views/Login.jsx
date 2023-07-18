@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom'
 const Login = () => {
   const [user, setUser] = useState('')
   const [password, setPassword] = useState('')
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
   const navigate = useNavigate()
   const handleUser = (e) => {
@@ -15,20 +14,12 @@ const Login = () => {
     setPassword(e.target.value)
   }
   const handleLogin = (e) => {
-    e.preventDefault()
-    if (user === 'admin' && password === 'admin') {
-      setIsLoggedIn(true)
-      setErrorMessage('')
-    } else {
-      setIsLoggedIn(false)
-      setErrorMessage('Nombre de usuario o contraseña incorrecto')
-    };
+    e.preventDefault();
+    (user === 'admin' && password === 'admin')
+      ? navigate('/inicio')
+      : setErrorMessage('Nombre de usuario o contraseña incorrecto')
   }
-  if (isLoggedIn) {
-    return (
-      navigate('/TotalUsers')
-    )
-  }
+
   return (
     <>
       <LoginContainer>
@@ -42,9 +33,7 @@ const Login = () => {
           </InputContainer>
           <ButtonContainer>
             <Button type='submit'>Iniciar Sesión</Button>
-
           </ButtonContainer>
-
         </form>
       </LoginContainer>
     </>

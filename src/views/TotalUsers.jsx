@@ -9,7 +9,7 @@ const TotalUsers = () => {
   const navigate = useNavigate()
 
   const handleClick = () => {
-    navigate('/TableUsers')
+    navigate('/usuarios')
   }
 
   return (

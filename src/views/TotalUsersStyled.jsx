@@ -29,7 +29,7 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
 cursor:pointer;
 & p {
   color:#db1b43;
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: bolder;
 }
 `
@@ -37,6 +37,7 @@ const Container = styled.div`
 display:flex;
 align-items: center;
 justify-content: space-evenly;
+margin-top:3rem;
 `
 const ImgContainer = styled.div`
 & img {
