@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { InputContainer, LoginContainer, ButtonContainer, Input, Button } from './LoginStyled'
+import { useNavigate } from 'react-router-dom'
+
 const Login = () => {
   const [user, setUser] = useState('')
   const [password, setPassword] = useState('')
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
-
+  const navigate = useNavigate()
   const handleUser = (e) => {
     setUser(e.target.value)
   }
@@ -24,7 +26,7 @@ const Login = () => {
   }
   if (isLoggedIn) {
     return (
-      <p>Crear view para navegacion a pagina de usuarios</p>
+      navigate('/TotalUsers')
     )
   }
   return (
