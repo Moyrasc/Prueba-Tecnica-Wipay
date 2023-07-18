@@ -20,7 +20,7 @@ font-weight:bold;
     color: red;
 }
 `
-const ContainerParagraph = styled.p`
+const ContainerParagraph = styled.div`
 padding:1rem 0rem;
 margin: 20px;
 display: flex;
