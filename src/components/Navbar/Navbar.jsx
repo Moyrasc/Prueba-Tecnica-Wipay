@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <NavContainer>
         <NavbarLinkContainer>
-          <NavbarLink to='/home'>
+          <NavbarLink to='/'>
             <img src={logo} alt='logo-home' />
           </NavbarLink>
           <NavbarLink to='/login'>Inicio Sesión</NavbarLink>

@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 const LoginContainer = styled.div`
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+align-items: center;
+display: flex;
+height: 80vh;
+justify-content: center;
+width: 100%;
 `
 const InputContainer = styled.div`
     display: flex;
