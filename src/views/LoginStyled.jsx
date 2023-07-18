@@ -6,6 +6,12 @@ display: flex;
 height: 80vh;
 justify-content: center;
 width: 100%;
+& p {
+    text-transform: uppercase;
+    color:red;
+    font-weight:bold;
+    padding-bottom: 1rem
+}
 `
 const InputContainer = styled.div`
     display: flex;
@@ -24,6 +30,7 @@ const Input = styled.input`
     border-radius: 5px;
     border: 1px solid #060303;
     padding: 10px;
+    width:450px
     
     `
 const ButtonContainer = styled.div`
@@ -40,7 +47,7 @@ const Button = styled.button`
     border: 2px solid white;
     cursor:pointer;
     padding: .5rem .5rem;
-    width: 240px;
+    width: 450px;
     font-size:1rem;
     `
 export {
