@@ -16,7 +16,7 @@ const StyledTable = styled.table`
         border-bottom: 1px solid #EBEBEB;
         color: #393939;
         font-family: 'Poppins', sans-serif;
-        font-size: 14px;
+        font-size: 16px;
         text-align: left;
         padding: 10px 15px;
         width: 50px;
