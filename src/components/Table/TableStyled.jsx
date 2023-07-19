@@ -20,12 +20,18 @@ const StyledTable = styled.table`
         text-align: left;
         padding: 10px 15px;
         width: 50px;
+        & button{
+            border: none;
+
+        }
         
     }
     th {
         text-align: left;
         border-bottom: 1px solid #cccccc;
-        padding: 20px 15px; 
+        padding: 20px 20px; 
+        font-weight:bold;
+        font-family: 'Poppins', sans-serif;
         }
         
 `
