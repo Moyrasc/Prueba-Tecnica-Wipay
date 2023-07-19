@@ -1,6 +1,20 @@
 import styled from 'styled-components'
 
-const LoginContainer = styled.div`
+const Container = styled.div`
+    border: 2px solid #0c2846;
+    border-radius:10px;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    border-radius: 10px
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
+`
+const FormContainer = styled.div`
 align-items: center;
 display: flex;
 height: 80vh;
@@ -39,7 +53,7 @@ const ButtonContainer = styled.div`
 
 `
 const Button = styled.button`
-    background-color: #db1b43;
+    background-color: #2e9935;
     color: white;
     font-weight: bold;
     margin-top: 1rem;
@@ -51,7 +65,8 @@ const Button = styled.button`
     font-size:1rem;
     `
 export {
-  LoginContainer,
+  Container,
+  FormContainer,
   InputContainer,
   Input,
   ButtonContainer,
