@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-    border: 2px solid #0c2846;
+    border: 2px solid #060303;
     border-radius:10px;
     width: 500px;
-    height: 300px;
+    height: 450px;
     display: flex;
     border-radius: 10px
     flex-direction: column;
