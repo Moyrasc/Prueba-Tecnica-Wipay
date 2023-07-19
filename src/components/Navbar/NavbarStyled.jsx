@@ -38,10 +38,13 @@ cursor: pointer;
     
 }
 `
+const NavContentLink = styled.div`
+display:flex`
 
 export {
   NavContainer,
   NavbarLinkContainer,
-  NavbarLink
+  NavbarLink,
+  NavContentLink
 
 }

@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { InputContainer, LoginContainer, ButtonContainer, Input, Button } from './LoginStyled'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 
 const Login = () => {
   const [user, setUser] = useState('')
   const [password, setPassword] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
   const navigate = useNavigate()
+  const { setIsLoggedIn } = useAuth()
   const handleUser = (e) => {
     setUser(e.target.value)
   }
@@ -14,10 +16,13 @@ const Login = () => {
     setPassword(e.target.value)
   }
   const handleLogin = (e) => {
-    e.preventDefault();
-    (user === 'admin' && password === 'admin')
-      ? navigate('/inicio')
-      : setErrorMessage('Nombre de usuario o contraseña incorrecto')
+    e.preventDefault()
+    if (user === 'admin' && password === 'admin') {
+      setIsLoggedIn(true)
+      navigate('/inicio')
+    } else {
+      setErrorMessage('Nombre de usuario o contraseña incorrecto')
+    }
   }
 
   return (
