@@ -19,6 +19,7 @@ const Navbar = () => {
           {isLoggedIn
             ? (
               <NavContentLink>
+                <NavbarLink to='/inicio'>Inicio</NavbarLink>
                 <NavbarLink to='/usuarios'>Usuarios</NavbarLink>
                 <NavbarLink to='/newuser'>Nuevo Usuario</NavbarLink>
                 <NavbarLink to='/' onClick={handleLogout}><BtnLink>Cerrar Sesión</BtnLink></NavbarLink>

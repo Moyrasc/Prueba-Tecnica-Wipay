@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
 import { Container, ImgContainer, UsersContainer, UsersTotal } from './TotalUsersStyled'
-import users from '../data/users.json'
 import imgGirl from '../assets/img-total-users.png'
 import { useNavigate } from 'react-router-dom'
+import { useData } from '../context/DataContext'
 
 const TotalUsers = () => {
-  const [data] = useState(users)
+  const { data } = useData()
+
   const navigate = useNavigate()
 
   const handleClick = () => {

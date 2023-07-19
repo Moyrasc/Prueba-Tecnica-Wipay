@@ -1,10 +1,11 @@
 import { StyledTable } from '../../components/Table/TableStyled'
-import Data from '../../data/users.json'
 import { BsPencil } from 'react-icons/bs'
 import { AiOutlineDelete } from 'react-icons/ai'
 import { useNavigate } from 'react-router-dom'
+import { useData } from '../../context/DataContext'
 
 const Table = () => {
+  const { data } = useData()
   const navigate = useNavigate()
   const handleClick = () => {
     navigate('/edit')
@@ -20,7 +21,7 @@ const Table = () => {
           <th>Acciones</th>
         </tr>
       </thead>
-      {Data.map((user, i) => {
+      {data.map((user, i) => {
         return (
           <tr key={user.id}>
             <td>{user.id}</td>
