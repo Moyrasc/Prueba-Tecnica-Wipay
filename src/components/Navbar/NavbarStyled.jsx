@@ -40,11 +40,25 @@ cursor: pointer;
 `
 const NavContentLink = styled.div`
 display:flex`
+const BtnLink = styled.button`
+cursor:pointer;
+border-radius:10px;
+width: 150px;
+height: 50px;
+background-color:#db1b43;
+border:none;
+color:white;
+`
+const BtnLogin = styled(BtnLink)`
+background-color: #0c2846
+`
 
 export {
   NavContainer,
   NavbarLinkContainer,
   NavbarLink,
-  NavContentLink
+  NavContentLink,
+  BtnLink,
+  BtnLogin
 
 }
