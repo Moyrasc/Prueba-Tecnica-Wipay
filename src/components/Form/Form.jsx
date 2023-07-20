@@ -2,12 +2,14 @@ import { useState } from 'react'
 import { Button, ButtonContainer, Container, FormContainer, Input, InputContainer } from './FormStyle'
 import { useData } from '../../context/DataContext'
 import validator from 'validator'
+import { useNavigate } from 'react-router-dom'
 
 const Form = () => {
   const { addUser } = useData()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -33,6 +35,7 @@ const Form = () => {
     setEmail('')
     setPassword('')
     setErrorMessage('')
+    navigate('/usuarios')
   }
   return (
     <>
