@@ -21,10 +21,13 @@ const EditProfile = () => {
               <label htmlFor='create-user'>Fecha de Creación</label>
               <Input type='' id='create-user' name='create-user' disabled defaultValue={selectedUser.create_user} />
               <label htmlFor='modificate-user'>Fecha de Modificación</label>
-              <Input type='' id='modificate-user' name='modificate-user' disabled />
+              <Input type='' id='modificate-user' name='modificate-user' disabled defaultValue={selectedUser.create_user} />
             </InputContainer>
             <ButtonContainer>
               <Button type='submit'>Editar Usuario</Button>
+            </ButtonContainer>
+            <ButtonContainer>
+              <Button type='submit' style={{ backgroundColor: '#db1b43' }}>Borrar Usuario</Button>
             </ButtonContainer>
           </form>
         </Container>

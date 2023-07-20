@@ -27,14 +27,16 @@ contener las siguientes funcionalidades:
 
 ✔ 2. Una pantalla para visualizar el listado de usuarios.
 
-3. Una pantalla para visualizar los datos de un usuario.
+✔ 3. Una pantalla para visualizar los datos de un usuario.
 
 4. Una pantalla para editar los datos de un usuario.
 
 5. Un botón de acción para eliminar el usuario.
 
     a. Dicho botón debe preguntar si se está seguro antes de eliminar el usuario.
+
     b. Dicho botón debe aparecer en el listado de usuarios, en la vista de detalles de usuario y en la vista de edición de usuario.
+
     c. Un usuario contiene los siguientes atributos junto a sus validaciones:
 
 ✔ - Un correo electrónico:
@@ -64,8 +66,10 @@ contener las siguientes funcionalidades:
 ● Se valorará positivamente el uso de librerías como:
 
 1. lodash
-2. react-router-dom
-3. validator
+
+✔ 2. react-router-dom
+
+✔ 3. validator
 
 ● Se valorará positivamente el uso de paginación para el listado de usuarios, aunque no
 es obligatorio.
