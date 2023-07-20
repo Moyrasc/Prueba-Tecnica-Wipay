@@ -5,10 +5,12 @@ import { useNavigate } from 'react-router-dom'
 import { useData } from '../../context/DataContext'
 
 const Table = () => {
-  const { data } = useData()
+  const { data, setSelectedUser } = useData()
   const navigate = useNavigate()
+
   const handleClick = (user) => {
-    navigate('/edit', { state: user })
+    setSelectedUser(user)
+    navigate('/edit')
   }
   return (
     <StyledTable>
@@ -29,7 +31,7 @@ const Table = () => {
               <td>{user.email}</td>
               <td>{user.password}</td>
               <td>{user.create_user}</td>
-              <td><BsPencil style={{ width: '20' + 'px', height: '20' + 'px', cursor: 'pointer', color: 'green' }} onClick={handleClick(user)} /><span style={{ marginLeft: '18px' }}><AiOutlineDelete style={{ width: '20' + 'px', height: '20' + 'px', cursor: 'pointer', color: 'red' }} /></span></td>
+              <td><BsPencil style={{ width: '20' + 'px', height: '20' + 'px', cursor: 'pointer', color: 'green' }} onClick={() => handleClick(user)} /><span style={{ marginLeft: '18px' }}><AiOutlineDelete style={{ width: '20' + 'px', height: '20' + 'px', cursor: 'pointer', color: 'red' }} /></span></td>
             </tr>
           )
         })}

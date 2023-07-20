@@ -8,8 +8,9 @@ export const useData = () => {
 }
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState(usersData)
-  // Implementar manera de añadir fecha de hoy al user
-  // {email,password,create_user}
+  // Aquí almacenaré los datos del usuario seleccionado
+  const [selectedUser, setSelectedUser] = useState(null)
+
   const getCurrentDate = () => {
     const date = new Date()
     return date.toLocaleDateString()
@@ -23,9 +24,9 @@ export const DataProvider = ({ children }) => {
     }
     setData((prevData) => [...prevData, newUser])
   }
-
+  // Edit user
   return (
-    <DataContext.Provider value={{ data, addUser }}>
+    <DataContext.Provider value={{ data, addUser, selectedUser, setSelectedUser }}>
       {children}
     </DataContext.Provider>
   )
