@@ -6,6 +6,7 @@ import TotalUsers from './views/TotalUsers'
 import TableUsers from './views/TableUsers'
 import EditProfile from './views/EditProfile'
 import NewUser from './views/NewUser'
+import ProtectedRoute from './components/ProtectedRoute'
 
 function App () {
   return (
@@ -14,10 +15,12 @@ function App () {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/inicio' element={<TotalUsers />} />
-        <Route path='/usuarios' element={<TableUsers />} />
-        <Route path='/edit' element={<EditProfile />} />
-        <Route path='/newuser' element={<NewUser />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path='/inicio' element={<TotalUsers />} />
+          <Route path='/usuarios' element={<TableUsers />} />
+          <Route path='/edit' element={<EditProfile />} />
+          <Route path='/newuser' element={<NewUser />} />
+        </Route>
       </Routes>
 
     </>

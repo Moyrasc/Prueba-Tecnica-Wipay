@@ -23,9 +23,9 @@ Se deberá desarrollar un panel de administración de usuarios que contemple las
 básicas de tipo CRUD (Create, Read, Update, Delete). Dicho panel de administración debe
 contener las siguientes funcionalidades:
 
-1. Una pantalla inicial donde se muestre el número total de usuarios actuales.
+✔ 1. Una pantalla inicial donde se muestre el número total de usuarios actuales.
 
-2. Una pantalla para visualizar el listado de usuarios.
+✔ 2. Una pantalla para visualizar el listado de usuarios.
 
 3. Una pantalla para visualizar los datos de un usuario.
 
@@ -37,19 +37,19 @@ contener las siguientes funcionalidades:
     b. Dicho botón debe aparecer en el listado de usuarios, en la vista de detalles de usuario y en la vista de edición de usuario.
     c. Un usuario contiene los siguientes atributos junto a sus validaciones:
 
-- Un correo electrónico:
+✔ - Un correo electrónico:
 
     a. De tipo String.
 
     b. Debe comprobarse que sea un correo electrónico válido.
 
-- Una contraseña:
+✔ - Una contraseña:
 
     a. De tipo String.
 
     b. Debe tener entre 6 y 12 caracteres de longitud.
 
-- Una fecha de creación:
+✔ - Una fecha de creación:
 
     a. De tipo Date.
 
