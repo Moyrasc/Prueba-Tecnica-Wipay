@@ -12,18 +12,14 @@ export const DataProvider = ({ children }) => {
   // {email,password,create_user}
   const getCurrentDate = () => {
     const date = new Date()
-    const currentDay = String(date.getDate()).padStart(2, '0')
-    const currentMonth = String(date.getMonth() + 1).padStart(2, '0')
-    const currentYear = date.getFullYear()
-
-    const currentDate = `${currentDay}-${currentMonth}-${currentYear}`
-    console.log('Current date:', currentDate)
+    return date.toLocaleDateString()
   }
 
   const addUser = (user) => {
     const newUser = {
       ...user,
-      create_user: getCurrentDate()
+      create_user: getCurrentDate(),
+      id: data.length + 1
     }
     setData((prevData) => [...prevData, newUser])
   }
