@@ -53,7 +53,7 @@ const ButtonContainer = styled.div`
 
 `
 const Button = styled.button`
-    background-color: #2e9935;
+    background-color: #0c2846;
     color: white;
     font-weight: bold;
     margin-top: 1rem;

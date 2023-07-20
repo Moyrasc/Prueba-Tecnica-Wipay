@@ -21,19 +21,19 @@ const Table = () => {
           <th>Acciones</th>
         </tr>
       </thead>
-      {data.map((user, i) => {
-        return (
-          <tr key={user.id}>
-            <td>{user.id}</td>
-            <td>{user.email}</td>
-            <td>{user.password}</td>
-            <td>{user.create_user}</td>
-            <td><BsPencil style={{ width: '20' + 'px', height: '20' + 'px', cursor: 'pointer', color: 'green' }} onClick={handleClick} /><span style={{ marginLeft: '18px' }}><AiOutlineDelete style={{ width: '20' + 'px', height: '20' + 'px', cursor: 'pointer', color: 'red' }} /></span></td>
-          </tr>
-        )
-      })}
-
-      <tbody />
+      <tbody>
+        {data.map((user, i) => {
+          return (
+            <tr key={user.id}>
+              <td>{user.id}</td>
+              <td>{user.email}</td>
+              <td>{user.password}</td>
+              <td>{user.create_user}</td>
+              <td><BsPencil style={{ width: '20' + 'px', height: '20' + 'px', cursor: 'pointer', color: 'green' }} onClick={handleClick} /><span style={{ marginLeft: '18px' }}><AiOutlineDelete style={{ width: '20' + 'px', height: '20' + 'px', cursor: 'pointer', color: 'red' }} /></span></td>
+            </tr>
+          )
+        })}
+      </tbody>
     </StyledTable>
   )
 }
