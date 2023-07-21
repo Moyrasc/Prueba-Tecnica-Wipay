@@ -5,12 +5,16 @@ import { useNavigate } from 'react-router-dom'
 import { useData } from '../../context/DataContext'
 import Modal from '../Modal/Modal'
 import { useState } from 'react'
+import CustomPagination from '../Pagination/CustomPagination'
+import { Container } from '../Pagination/CustomPaginationStyled'
 
 const Table = () => {
   const [id, setId] = useState()
   const { data, deleteUser } = useData()
   const navigate = useNavigate()
   const [isModalOpen, setModalOpen] = useState(false)
+  const [currentPage, setCurrentPage] = useState(1)
+  const itemsPerPage = 12
 
   const handleClick = (user) => {
     navigate('/edit/' + user.id)
@@ -28,8 +32,17 @@ const Table = () => {
 
     setModalOpen(false)
   }
+  // Lógica para cambiar de página
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage)
+  }
+  // Lógica para calcular el índice del primer y último elemento en la página actual
+  const indexOfLastItem = currentPage * itemsPerPage
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage
+  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem)
+
   return (
-    <>
+    <Container>
       <StyledTable>
         <thead>
           <tr>
@@ -42,7 +55,7 @@ const Table = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((user, i) => {
+          {currentItems.map((user, i) => {
             return (
               <tr key={user.id}>
                 <td>{user.id}</td>
@@ -63,7 +76,13 @@ const Table = () => {
       {isModalOpen && (
         <Modal closeModal={handleCloseModal} handleDeleteUser={() => handleDeleteUser(id)} />
       )}
-    </>
+      <CustomPagination
+        totalItems={data.length}
+        itemsPerPage={itemsPerPage}
+        currentPage={currentPage}
+        onPageChange={handlePageChange}
+      />
+    </Container>
   )
 }
 

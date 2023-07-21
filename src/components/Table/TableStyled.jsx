@@ -1,10 +1,4 @@
 import styled from 'styled-components'
-const FilterTable = styled.div`
-  display: flex;
-  height: 50px;
-  margin: 30px 0px;
-  
-`
 
 const StyledTable = styled.table`
     margin-top:2rem;
@@ -12,6 +6,7 @@ const StyledTable = styled.table`
     width: 96%;
     background-color: #ffffff;
     border-radius: 20px;
+
     td {
         border-bottom: 1px solid #EBEBEB;
         color: #393939;
@@ -37,7 +32,6 @@ const StyledTable = styled.table`
 `
 
 export {
-  StyledTable,
-  FilterTable
+  StyledTable
 
 }

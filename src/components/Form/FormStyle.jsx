@@ -11,8 +11,8 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
--moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
 `
 const FormContainer = styled.div`
 align-items: center;
