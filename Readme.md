@@ -86,4 +86,13 @@ es obligatorio.
 
     c. Las rutas están protegidas, de tal manera que si no se inicia la sesión no se puede acceder a ninguna de las vistas, también la barra de navegación es dinámica en función de si se ha iniciado la sesión o no.
 
-3. He implementado paginación para la tabla de usuarios.    
+3. He implementado paginación para la tabla de usuarios.
+
+![Home](src\assets\home.png)
+![Usuarios](src\assets\tabla.png)
+![Performance](src\assets\performance.png)
+
+
+##  🚀  PROYECTO DESPLEGADO:
+
+[💻 💻  HAZ CLICK AQUÍ PARA VER EL PROYECTO 💻 💻 ](https://cute-squirrel-6d937c.netlify.app/)
