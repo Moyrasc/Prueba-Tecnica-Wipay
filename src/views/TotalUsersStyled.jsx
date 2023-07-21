@@ -17,8 +17,8 @@ justify-content: flex-start;
 
 const UsersTotal = styled.div`
 border: solid 2px #010306;
-width: 400px;
-height: 400px;
+width: 300px;
+height: 300px;
 border-radius: 10px;
 display: flex;
 justify-content: center;
@@ -37,12 +37,12 @@ const Container = styled.div`
 display:flex;
 align-items: center;
 justify-content: space-evenly;
-margin-top:3rem;
+margin-top:2rem;
 `
 const ImgContainer = styled.div`
 & img {
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: 500px;
   
 }
 `
