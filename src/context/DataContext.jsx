@@ -11,12 +11,12 @@ export const DataProvider = ({ children }) => {
 
   // Aquí almacenaré los datos del usuario seleccionado
   const findUserById = (id) => data?.find(user => user.id === Number(id))
-
+  //
   const getCurrentDate = () => {
     const date = new Date()
     return date.toLocaleDateString()
   }
-
+  // Añadir usuario
   const addUser = (user) => {
     const newUser = {
       ...user,
@@ -25,9 +25,13 @@ export const DataProvider = ({ children }) => {
     }
     setData((prevData) => [...prevData, newUser])
   }
-  // Edit user
+  // Editar usuario
+  // Eliminar Usuario
+  const deleteUser = (userId) => {
+    setData((prevData) => prevData.filter(user => user.id !== userId))
+  }
   return (
-    <DataContext.Provider value={{ data, addUser, findUserById }}>
+    <DataContext.Provider value={{ data, addUser, findUserById, deleteUser }}>
       {children}
     </DataContext.Provider>
   )
