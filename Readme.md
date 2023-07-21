@@ -28,7 +28,7 @@ contener las siguientes funcionalidades:
 
 ✔ 3. Una pantalla para visualizar los datos de un usuario.
 
-4. Una pantalla para editar los datos de un usuario.
+✔ 4. Una pantalla para editar los datos de un usuario.
 
 ✔ 5. Un botón de acción para eliminar el usuario:
 
@@ -54,7 +54,7 @@ contener las siguientes funcionalidades:
 
     a. De tipo Date.
 
-- Una fecha de última actualización:
+✔ - Una fecha de última actualización:
 
     a. De tipo Date.
 
@@ -74,3 +74,14 @@ contener las siguientes funcionalidades:
 es obligatorio.
 
 ● Se valorará positivamente el uso de un código limpio.
+
+## RESULTADO FINAL
+
+- He seguido todas las indicaciones del proyecto exceptuando "create-app-react", ya que para el mismo he utilizado vite.
+- He añadido al mismo las siguientes características:
+
+    a. Una página inicial de presentación de la empresa
+
+    b. Una página de inicio de sesión con un Login, para el cual no he utilizado ninguna biblioteca externa.
+
+    c. Las rutas están protegidas, de tal manera que si no se inicia la sesión no se puede acceder a ninguna de las vistas, también la barra de navegación es dinámica en función de si se ha iniciado la sesión o no.
