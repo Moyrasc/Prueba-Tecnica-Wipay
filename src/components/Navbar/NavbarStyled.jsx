@@ -35,6 +35,7 @@ cursor: pointer;
 }
 & img {
     width: 200px;
+    height: 57px;
     
 }
 `

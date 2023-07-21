@@ -48,9 +48,13 @@ width: 95%;
 & p {
   margin: 1rem 1rem;
 }
-& h3 {
+& h2 {
   color: #0c2846;
   font-size: 26px
+}
+& img {
+  height: 80px;
+  width:80px;
 }
 
 `

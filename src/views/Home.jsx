@@ -18,34 +18,34 @@ const Home = () => {
           <ContentSection>
             <Section>
               <img src={liderazgo} alt='icon' style={{ width: '80' + 'px' }} />
-              <h3>Liderazgo</h3>
+              <h2>Liderazgo</h2>
               <p>Creemos en nuestro proyecto, sacando lo mejor de cada uno de nosostros.</p>
             </Section>
             <Section>
               <img src={rapidez} alt='rocket' style={{ width: '80' + 'px' }} />
-              <h3>Rapidez</h3>
+              <h2>Rapidez</h2>
               <p>Mantenemos una velocidad constante y fluida para lograr los objetivos propuestos.</p>
             </Section>
             <Section>
               <img src={precision} alt='target' style={{ width: '80' + 'px' }} />
-              <h3>Precision </h3>
+              <h2>Precision </h2>
               <p>Organizamos cada uno de los servicios para dar respuesta a cualquier problema.</p>
             </Section>
           </ContentSection>
           <ContentSection>
             <Section>
               <img src={seguridad} alt='shield' style={{ width: '80' + 'px' }} />
-              <h3>Seguridad </h3>
+              <h2>Seguridad </h2>
               <p>Protección en todas las vías de negocio para reducir riesgos en cada cliente.</p>
             </Section>
             <Section>
               <img src={calidad} alt='quality' style={{ width: '80' + 'px' }} />
-              <h3>Calidad </h3>
+              <h2>Calidad </h2>
               <p>Nuestra misión diaria es tener presente las expectativas de nuestros clientes.</p>
             </Section>
             <Section>
               <img src={esfuerzo} alt='effort' style={{ width: '80' + 'px' }} />
-              <h3>Esfuerzo </h3>
+              <h2>Esfuerzo </h2>
               <p>Trabajamos para lograr nuevos retos como la expansión empresarial de negocio.</p>
             </Section>
           </ContentSection>
