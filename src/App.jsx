@@ -18,7 +18,7 @@ function App () {
         <Route element={<ProtectedRoute />}>
           <Route path='/inicio' element={<TotalUsers />} />
           <Route path='/usuarios' element={<TableUsers />} />
-          <Route path='/edit' element={<EditProfile />} />
+          <Route path='/edit/:id' element={<EditProfile />} />
           <Route path='/newuser' element={<NewUser />} />
         </Route>
       </Routes>

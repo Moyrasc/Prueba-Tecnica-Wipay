@@ -5,12 +5,11 @@ import { useNavigate } from 'react-router-dom'
 import { useData } from '../../context/DataContext'
 
 const Table = () => {
-  const { data, setSelectedUser } = useData()
+  const { data } = useData()
   const navigate = useNavigate()
 
   const handleClick = (user) => {
-    setSelectedUser(user)
-    navigate('/edit')
+    navigate('/edit/' + user.id)
   }
   return (
     <StyledTable>

@@ -8,8 +8,9 @@ export const useData = () => {
 }
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState(usersData)
+
   // Aquí almacenaré los datos del usuario seleccionado
-  const [selectedUser, setSelectedUser] = useState(null)
+  const findUserById = (id) => data?.find(user => user.id === Number(id))
 
   const getCurrentDate = () => {
     const date = new Date()
@@ -26,7 +27,7 @@ export const DataProvider = ({ children }) => {
   }
   // Edit user
   return (
-    <DataContext.Provider value={{ data, addUser, selectedUser, setSelectedUser }}>
+    <DataContext.Provider value={{ data, addUser, findUserById }}>
       {children}
     </DataContext.Provider>
   )
