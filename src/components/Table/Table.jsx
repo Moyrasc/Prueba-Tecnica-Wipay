@@ -1,13 +1,13 @@
 import { StyledTable } from '../../components/Table/TableStyled'
 import { BsPencil } from 'react-icons/bs'
 import { AiOutlineDelete } from 'react-icons/ai'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useData } from '../../context/DataContext'
 import Modal from '../Modal/Modal'
 import { useState } from 'react'
 
 const Table = () => {
-  const { id } = useParams()
+  const [id, setId] = useState()
   const { data, deleteUser } = useData()
   const navigate = useNavigate()
   const [isModalOpen, setModalOpen] = useState(false)
@@ -15,8 +15,9 @@ const Table = () => {
   const handleClick = (user) => {
     navigate('/edit/' + user.id)
   }
-  const handleOpenModal = () => {
+  const handleOpenModal = (userId) => {
     setModalOpen(true)
+    setId(userId)
   }
 
   const handleCloseModal = () => {
@@ -24,6 +25,7 @@ const Table = () => {
   }
   const handleDeleteUser = () => {
     deleteUser(id)
+
     setModalOpen(false)
   }
   return (
@@ -48,14 +50,18 @@ const Table = () => {
                 <td>{user.password}</td>
                 <td>{user.create_user}</td>
                 <td>{user.modificate_user ? user.modificate_user : user.create_user}</td>
-                <td><BsPencil style={{ width: '20' + 'px', height: '20' + 'px', cursor: 'pointer', color: 'green' }} onClick={() => handleClick(user)} /><span style={{ marginLeft: '18px' }}><AiOutlineDelete onClick={handleOpenModal} style={{ width: '20' + 'px', height: '20' + 'px', cursor: 'pointer', color: 'red' }} /></span></td>
+                <td><BsPencil style={{ width: '20' + 'px', height: '20' + 'px', cursor: 'pointer', color: 'green' }} onClick={() => handleClick(user)} />
+                  <span style={{ marginLeft: '18px' }}>
+                    <AiOutlineDelete onClick={() => handleOpenModal(user.id)} style={{ width: '20' + 'px', height: '20' + 'px', cursor: 'pointer', color: 'red' }} />
+                  </span>
+                </td>
               </tr>
             )
           })}
         </tbody>
       </StyledTable>
       {isModalOpen && (
-        <Modal closeModal={handleCloseModal} handleDeleteUser={handleDeleteUser} />
+        <Modal closeModal={handleCloseModal} handleDeleteUser={() => handleDeleteUser(id)} />
       )}
     </>
   )

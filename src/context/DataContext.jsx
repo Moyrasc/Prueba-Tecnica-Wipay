@@ -33,6 +33,7 @@ export const DataProvider = ({ children }) => {
   }
   // Eliminar Usuario
   const deleteUser = (userId) => {
+    console.log(userId)
     setData((prevData) => prevData.filter(user => user.id !== Number(userId)))
   }
   return (
