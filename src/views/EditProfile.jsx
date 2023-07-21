@@ -56,7 +56,7 @@ const EditProfile = () => {
               <label htmlFor='create-user'>Fecha de Creación</label>
               <Input type='' id='create-user' name='create-user' disabled defaultValue={selectedUser.create_user} />
               <label htmlFor='modificate-user'>Fecha de Modificación</label>
-              <Input type='' id='modificate-user' name='modificate-user' disabled defaultValue={selectedUser.create_user} />
+              <Input type='' id='modificate-user' name='modificate-user' disabled defaultValue={selectedUser.modificate_user ? selectedUser.modificate_user : selectedUser.create_user} />
             </InputContainer>
             <ButtonContainer>
               {isEditing

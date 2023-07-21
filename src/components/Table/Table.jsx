@@ -33,8 +33,9 @@ const Table = () => {
           <tr>
             <th>ID</th>
             <th>Correo electrónico</th>
-            <th>Password</th>
-            <th>Fecha de registro</th>
+            <th>Contraseña</th>
+            <th>Fecha registro</th>
+            <th>Fecha modificación</th>
             <th>Acciones</th>
           </tr>
         </thead>
@@ -46,6 +47,7 @@ const Table = () => {
                 <td>{user.email}</td>
                 <td>{user.password}</td>
                 <td>{user.create_user}</td>
+                <td>{user.modificate_user ? user.modificate_user : user.create_user}</td>
                 <td><BsPencil style={{ width: '20' + 'px', height: '20' + 'px', cursor: 'pointer', color: 'green' }} onClick={() => handleClick(user)} /><span style={{ marginLeft: '18px' }}><AiOutlineDelete onClick={handleOpenModal} style={{ width: '20' + 'px', height: '20' + 'px', cursor: 'pointer', color: 'red' }} /></span></td>
               </tr>
             )
