@@ -87,6 +87,7 @@ es obligatorio.
     c. Las rutas están protegidas, de tal manera que si no se inicia la sesión no se puede acceder a ninguna de las vistas, también la barra de navegación es dinámica en función de si se ha iniciado la sesión o no.
 
 3. He implementado paginación para la tabla de usuarios.
+4. BONUS: Voy a empezar a trabajar en la implementación del back-end utilizando Node js 
 
 ## IMÁGENES
 
