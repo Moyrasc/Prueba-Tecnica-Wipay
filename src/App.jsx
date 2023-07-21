@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './views/Home'
-import Login from './views/login'
+import Login from './views/Login'
 import Navbar from './components/Navbar/Navbar'
 import TotalUsers from './views/TotalUsers'
 import TableUsers from './views/TableUsers'
