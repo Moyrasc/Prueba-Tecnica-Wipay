@@ -10,8 +10,7 @@ siguientes restricciones para desarrollar el proyecto.
 
 1. Se debe utilizar create-react-app.
 2. Se deben utilizar los hooks para las tareas solicitadas.
-3. No será necesario desarrollar ni utilizar ningún tipo de librerías para la autenticación y
-autorización.
+3. No será necesario desarrollar ni utilizar ningún tipo de librerías para la autenticación y autorización.
 4. Se deberá utilizar un array en memoria para el almacenamiento de los datos solicitados.
 
 No siendo necesario la utilización de ninguna base de datos, ORM o API para
@@ -31,7 +30,7 @@ contener las siguientes funcionalidades:
 
 4. Una pantalla para editar los datos de un usuario.
 
-5. Un botón de acción para eliminar el usuario.
+✔ 5. Un botón de acción para eliminar el usuario:
 
     a. Dicho botón debe preguntar si se está seguro antes de eliminar el usuario.
 

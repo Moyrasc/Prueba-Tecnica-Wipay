@@ -13,6 +13,10 @@ border-radius: 5px;
 -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
 box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
 border: solid 1px #010306;
+position: absolute;
+    top: 50%;
+    right: 40%;
+    background-color: white;
 & h2 {
     text-align: center;
     font-size: 20px;

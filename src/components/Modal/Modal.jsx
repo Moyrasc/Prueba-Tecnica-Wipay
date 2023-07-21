@@ -1,6 +1,6 @@
 import { Btn, BtnModal, ContainerModal } from './ModalStyled'
 
-function Modal () {
+function Modal ({ closeModal, handleDeleteUser }) {
   return (
     <>
       <ContainerModal>
@@ -8,10 +8,10 @@ function Modal () {
 
         <BtnModal>
           <div>
-            <Btn>Eliminar</Btn>
+            <Btn onClick={() => handleDeleteUser()}>Eliminar</Btn>
           </div>
           <div>
-            <Btn style={{ backgroundColor: '#797D7F' }}>Cancelar</Btn>
+            <Btn style={{ backgroundColor: '#797D7F' }} onClick={() => closeModal()}>Cancelar</Btn>
           </div>
 
         </BtnModal>

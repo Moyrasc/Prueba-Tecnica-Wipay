@@ -28,7 +28,7 @@ export const DataProvider = ({ children }) => {
   // Editar usuario
   // Eliminar Usuario
   const deleteUser = (userId) => {
-    setData((prevData) => prevData.filter(user => user.id !== userId))
+    setData((prevData) => prevData.filter(user => user.id !== Number(userId)))
   }
   return (
     <DataContext.Provider value={{ data, addUser, findUserById, deleteUser }}>
