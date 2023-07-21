@@ -26,12 +26,17 @@ export const DataProvider = ({ children }) => {
     setData((prevData) => [...prevData, newUser])
   }
   // Editar usuario
+  const editUser = (userId, updatedUser) => {
+    setData((prevData) =>
+      prevData.map((user) =>
+        user.id === Number(userId) ? { ...user, ...updatedUser, modificate_user: getCurrentDate() } : user))
+  }
   // Eliminar Usuario
   const deleteUser = (userId) => {
     setData((prevData) => prevData.filter(user => user.id !== Number(userId)))
   }
   return (
-    <DataContext.Provider value={{ data, addUser, findUserById, deleteUser }}>
+    <DataContext.Provider value={{ data, addUser, findUserById, deleteUser, editUser }}>
       {children}
     </DataContext.Provider>
   )
