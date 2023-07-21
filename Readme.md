@@ -88,11 +88,14 @@ es obligatorio.
 
 3. He implementado paginación para la tabla de usuarios.
 
-![Home](src\assets\home.png)
-![Usuarios](src\assets\tabla.png)
-![Performance](src\assets\performance.png)
+## IMÁGENES
 
+<img src='src\assets\home.png' alt='home'>
 
-##  🚀  PROYECTO DESPLEGADO:
+<img src='src\assets\tabla.png' alt='users'>
 
-[💻 💻  HAZ CLICK AQUÍ PARA VER EL PROYECTO 💻 💻 ](https://cute-squirrel-6d937c.netlify.app/)
+<img src='src\assets\performance.png' alt='performance'>
+
+## 🚀 PROYECTO DESPLEGADO
+
+[💻 💻 HAZ CLICK AQUÍ PARA VER EL PROYECTO💻 💻 ](https://cute-squirrel-6d937c.netlify.app/)
