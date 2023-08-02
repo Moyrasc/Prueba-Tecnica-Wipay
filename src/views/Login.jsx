@@ -17,13 +17,7 @@ const Login = () => {
   }
   const handleLogin = (e) => {
     e.preventDefault()
-    // if (user === 'admin@admin.com' && password === 'admin') {
-    //   setIsLoggedIn(true)
-    //   navigate('/inicio')
-    // } else {
-    //   setErrorMessage('Nombre de usuario o contraseña incorrecto')
-    // }
-    fetch('http://localhost:3000/login', {
+    fetch(import.meta.env.VITE_BACKEND_URL + '/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -41,10 +35,7 @@ const Login = () => {
         }
       })
       .then((data) => {
-        /* global localStorage */
-        /* eslint no-undef: "error" */
-        localStorage.setItem('accessToken', data.token)
-        setIsLoggedIn(true)
+        setIsLoggedIn(data)
         setErrorMessage('')
         navigate('/inicio')
       })
@@ -63,7 +54,7 @@ const Login = () => {
               <label htmlFor='user'>Usuario</label>
               <Input type='text' id='user' name='user' placeholder='admin@admin.com' value={user} onChange={handleUser} />
               <label htmlFor='password'>Contraseña</label>
-              <Input type='password' id='password' name='password' placeholder='admin' value={password} onChange={handlePassword} />
+              <Input type='password' id='password' name='password' placeholder='admin01' value={password} onChange={handlePassword} />
             </InputContainer>
             <ButtonContainer>
               <Button type='submit'>Iniciar Sesión</Button>

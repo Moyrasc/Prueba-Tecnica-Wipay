@@ -15,8 +15,11 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem('isLoggedIn', JSON.stringify(isLoggedIn))
   }, [isLoggedIn])
 
+  const fetchLogin = ({ email, password }) => {
+    // ? TODO: logica del fetch
+  }
   return (
-    <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
+    <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn, fetchLogin }}>
       {children}
     </AuthContext.Provider>
   )
