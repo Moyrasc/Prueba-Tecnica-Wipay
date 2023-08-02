@@ -18,12 +18,40 @@ const Login = () => {
   }
   const handleLogin = (e) => {
     e.preventDefault()
-    if (user === 'admin@admin.com' && password === 'admin') {
-      setIsLoggedIn(true)
-      navigate('/inicio')
-    } else {
-      setErrorMessage('Nombre de usuario o contraseña incorrecto')
-    }
+    // if (user === 'admin@admin.com' && password === 'admin') {
+    //   setIsLoggedIn(true)
+    //   navigate('/inicio')
+    // } else {
+    //   setErrorMessage('Nombre de usuario o contraseña incorrecto')
+    // }
+    fetch('http://localhost:3000/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: user,
+        password
+      })
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json()
+        } else {
+          throw new Error('Nombre de usuario o contraseña incorrecto')
+        }
+      })
+      .then((data) => {
+        /* global localStorage */
+        /* eslint no-undef: "error" */
+        localStorage.setItem('accessToken', data.token)
+        setIsLoggedIn(true)
+        setErrorMessage('')
+        navigate('/inicio')
+      })
+      .catch((error) => {
+        setErrorMessage(error.message)
+      })
   }
 
   return (
