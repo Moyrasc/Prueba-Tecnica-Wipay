@@ -10,7 +10,6 @@ const EditProfile = () => {
   const selectedUser = findUserById(id)
   const [isModalOpen, setModalOpen] = useState(false)
   const [isEditing, setIsEditing] = useState(false)
-
   const [isSubmitting, setIsSubmitting] = useState(false)
   const navigate = useNavigate()
 
