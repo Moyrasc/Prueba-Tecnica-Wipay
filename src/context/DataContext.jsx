@@ -42,12 +42,11 @@ export const DataProvider = ({ children }) => {
 
   // Aquí almacenaré los datos del usuario seleccionado
   const findUserById = (id) => data?.find(user => user.id === Number(id))
-
   const getCurrentDate = () => {
     const date = new Date()
     return date.toLocaleDateString()
   }
-  // Añadir usuario A LA ESPERA DE CAMBIAR BACK
+  // Añadir usuario
   const addUser = async (user) => {
     try {
       const res = await fetch(import.meta.env.VITE_BACKEND_URL + '/users', {
@@ -61,7 +60,10 @@ export const DataProvider = ({ children }) => {
       if (!res.ok) {
         throw new Error('Error al añadir al usuario')
       }
-      setData((prevData) => [...prevData, user])
+      const responseData = await res.json()
+      responseData.create_user = new Date(responseData.create_user).toLocaleDateString()
+      responseData.modificate_user = new Date(responseData.modificate_user).toLocaleDateString()
+      setData((prevData) => [...prevData, responseData])
     } catch (error) {
       console.error('Error fetch usuario:', error)
     }
