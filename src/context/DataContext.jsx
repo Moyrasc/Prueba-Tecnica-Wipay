@@ -47,7 +47,7 @@ export const DataProvider = ({ children }) => {
     const date = new Date()
     return date.toLocaleDateString()
   }
-  // Añadir usuario
+  // Añadir usuario A LA ESPERA DE CAMBIAR BACK
   const addUser = async (user) => {
     try {
       const res = await fetch(import.meta.env.VITE_BACKEND_URL + '/users', {
@@ -91,13 +91,28 @@ export const DataProvider = ({ children }) => {
     }
   }
   // Eliminar Usuario
-  const deleteUser = async (userId) => {
-    // try {
-    //   const res = await fetch(import.meta.env.VITE_BACKEND_URL + `/users/${id}`)
-    // } catch (error) {
+  const deleteUser = async (id) => {
+    try {
+      const res = await fetch(import.meta.env.VITE_BACKEND_URL + `/users/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: 'Bearer ' + isLoggedIn
+        }
 
-    // }
-    setData((prevData) => prevData.filter(user => user.id !== Number(userId)))
+      })
+      if (!res.ok) {
+        throw new Error('Error al editar usuario')
+      }
+      setData((prevData) =>
+        prevData.map((user) =>
+          user.id === Number(id) ? { ...user, modificate_user: getCurrentDate() } : user
+        )
+      )
+    } catch (error) {
+      console.error('Error al editar usuario:', error)
+    }
+    setData((prevData) => prevData.filter(user => user.id !== Number(id)))
   }
   return (
     <DataContext.Provider value={{ data, addUser, findUserById, deleteUser, editUser }}>
